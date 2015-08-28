@@ -1,7 +1,16 @@
 class ListingsController < ApplicationController
   def index
-    @listings = Listing.all
+    listings = paginate Listing.search(search_params), per_page: 100
+    listing_geojson = ListingGeojson.new(listings).geojson
+    render json: listing_geojson
+  end
 
-    render json: @listings
+  private
+
+  def search_params
+    params.slice(
+      :street, :status, :min_bed, :max_bed, :min_bath,
+      :max_bath, :min_price, :max_price, :min_sq_ft, :max_sq_ft
+    )
   end
 end

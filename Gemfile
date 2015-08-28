@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.3'
 gem 'rails-api'
 gem 'sqlite3'
+gem 'kaminari'
+gem 'api-pagination'
 
 group :development do
   gem 'spring'

@@ -14,4 +14,12 @@ RSpec.describe Listing, type: :model do
     it { is_expected.to have_db_column(:created_at).of_type(:datetime) }
     it { is_expected.to have_db_column(:updated_at).of_type(:datetime) }
   end
+
+  describe '.search' do
+    it 'delegates to the listing searcher' do
+      terms = { price: 100_00 }
+      expect(ListingSearcher).to receive(:search).with(Listing, terms)
+      Listing.search(terms)
+    end
+  end
 end
