@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 
+ruby '2.2.2'
+
 gem 'rails', '4.2.3'
 gem 'rails-api'
-gem 'sqlite3'
+gem 'pg'
 gem 'kaminari'
 gem 'api-pagination'
 
@@ -20,4 +22,8 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'pry'
+end
+
+group :production do
+  gem 'rails_12factor'
 end

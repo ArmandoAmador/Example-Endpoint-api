@@ -1,4 +1,4 @@
-# Description
+#Description
 
 In this repo I'm taking CSV data of real estate listings.
 
@@ -27,3 +27,10 @@ Wish List
  - Refactoring listing searcher class
  - A map to visualize the location of each listing
 
+# Development
+
+ - Clone repo
+ - `bundle install`
+ - `rake import:listings` to import data
+ - `rails s`
+ - `localhost:3000/listings`
