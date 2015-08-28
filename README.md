@@ -21,6 +21,9 @@ Task completed
  - Rake task to import CSV data in the database
  - Pagination via web linking
 
+
+If I had more time to spend on this exercise, I would like to finish implementing the rest of the endpoints and also make sure that they can be access for mobile and web application. I would like to also create a small CRUD application and a small map to show where these listings are. I would like to also refactor my listing searcher class and possibly use some metaprogramming to clean up some of the similar methods.
+
 Wish List
  - Create a small CRUD application
  - Testing CSV data import
