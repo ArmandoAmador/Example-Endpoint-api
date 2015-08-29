@@ -6,7 +6,7 @@ FactoryGirl.define do
     bedrooms Faker::Number.between(1, 4)
     bathrooms Faker::Number.between(1, 4)
     sq_ft { rand(1000..4000) }
-    lat { Faker::Address.latitude }
-    lng { Faker::Address.longitude }
+    lat 0
+    lng 0
   end
 end
